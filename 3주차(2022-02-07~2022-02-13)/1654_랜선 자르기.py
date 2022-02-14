@@ -23,7 +23,7 @@ while(start<=end):
   n_len = 0
   mid = (start+end) // 2
   for i in n_list:
-    n_len += (i//mid)
+    n_len += (i//mid)      
 
   if n_len >= n:  # 랜선의 길이가 더 길 필요가 있다 <여기서 = 의 의미 파악> 최대길이
     start = mid + 1 # 현재 mid를 기준으로 오른쪽 구간 탐색 

@@ -29,4 +29,4 @@ for _ in range(n):
     if len(que) == 0:
       print(-1)
     else:
-      print(que[len(que)-1])
+      print(que[-1])

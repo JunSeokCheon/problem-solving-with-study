@@ -6,7 +6,7 @@ for _ in range(n):
   for i in vps:
     if i == "(":
       stack.append(i)
-    elif i == ")" and len(stack)!=0: 
+    elif i == ")" and len(stack)!=0:
       if stack[-1] == "(":
         stack.pop()
       else:
