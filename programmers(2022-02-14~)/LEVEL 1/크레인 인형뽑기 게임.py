@@ -29,9 +29,8 @@ def solution(board, moves):
                 result.append(new_board[move-1][i])
                 new_board[move-1][i] = 0            
                 break
-                
-    stack.append(result[0])      
-    for num in result[1:]:
+                    
+    for num in result:
         if len(stack) != 0 and stack[-1] == num:
             stack.pop()
         else:
