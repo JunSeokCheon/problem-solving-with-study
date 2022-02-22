@@ -1,31 +1,18 @@
 # 삽질 한거..(결국 실패: 이유 몰?루)
 # cal = input()
-# # print(cal.split("-"))
+# print(cal.split("-"))
 # cal_split = cal.split("-")
 # result = 0
-# if cal[0] == "-":
-#   cal_split.remove('')
-#   for i, str in enumerate(cal_split):
-#     if "+" in str:
-#       cal_split[i] = eval(str) # eval 은 식(문자열로 된 식, 단일 숫자도 식이다)을 실행하는 함수 | 예외 "0000009"은 되지 않는다. 왜냐하면 파이썬에서는 10진법에서는 숫자 맨 앞에 0을 쓸 수 없다.
-#     else:
-#       cal_split[i] = int(str)
-# else:
-#   for i, str in enumerate(cal_split):
-#     if "+" in str:
-#       cal_split[i] = eval(str) # eval 은 식(문자열로 된 식, 단일 숫자도 식이다)을 실행하는 함수 | 예외 "0000009"은 되지 않는다. 왜냐하면 파이썬에서는 10진법에서는 숫자 맨 앞에 0을 쓸 수 없다.
-#     else:
-#       cal_split[i] = int(str)
+# for i, str in enumerate(cal_split):
+#   if "+" in str:
+#     cal_split[i] = eval(str) # eval 은 식(문자열로 된 식, 단일 숫자도 식이다)을 실행하는 함수 | 예외 "0000009"은 되지 않는다. 왜냐하면 파이썬에서는 10진법에서는 숫자 맨 앞에 0을 쓸 수 없다.
+#   else:
+#     cal_split[i] = int(str)
 
-# # print(cal_split)
-# if cal[0] == "-":
-#   result -= cal_split[0]
-#   for i in range(1, len(cal_split)):
-#     result -= cal_split[i]
-# else:
-#   result += cal_split[0]
-#   for i in range(1, len(cal_split)):
-#     result -= cal_split[i]
+# print(cal_split)
+# result += cal_split[0]
+# for i in range(1, len(cal_split)):
+#   result -= cal_split[i]
 
 # print(result)
 ######## 삽질 : 만약 -20+30+40-10+20-30 이 온다면 ?
