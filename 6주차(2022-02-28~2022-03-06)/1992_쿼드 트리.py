@@ -1,4 +1,3 @@
-# 무조건 1->2->3->4사 분면으로 이동
 n = int(input())
 n_list = [list(map(int,input())) for _ in range(n)]
 
