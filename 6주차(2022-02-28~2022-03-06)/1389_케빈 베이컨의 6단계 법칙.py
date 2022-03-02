@@ -9,21 +9,20 @@ for _ in range(m):
   n_list[b].append(a)
   
 def dfs(v):
-  visited = [0] * (n+1)
-  cabin = [0] * (n+1)
+  visited = [-1] * (n+1)
   que = deque()
   que.append(v)
-  visited[v] = 1
+  visited[v] = 0
 
   while que:
     x = que.popleft()
     for i in n_list[x]:
-      if visited[i] == 0:
+      if visited[i] == -1:
         que.append(i)
-        cabin[i] = cabin[x] + 1
-        visited[i] = 1
-  # print(cabin)
-  return sum(cabin)
+        visited[i] = visited[x] + 1
+        
+  # print(visited)
+  return sum(visited)
 
 for i in range(1, n+1):
   result.append(dfs(i))
