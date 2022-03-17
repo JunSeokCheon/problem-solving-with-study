@@ -1,38 +1,28 @@
-import sys
-input = sys.stdin.readline
+def check(num):
+  if n_list[num] == 0:
+    n_list[num] = 1
+  else:
+    n_list[num] = 0
 
 n = int(input())
-n_list = list(map(int ,input().split()))
-std_num = int(input())
-for _ in range(std_num):
+n_list = list(map(int, input().split()))
+switch = int(input())
+
+for _ in range(switch):
   gender, num = map(int, input().split())
   if gender == 1:
-    for i in range(1,n+1):
+    for i in range(num, n+1):
       if i%num == 0:
-        if n_list[i-1] == 0:
-          n_list[i-1] = 1
-        else:
-          n_list[i-1] = 0
+        check(i-1)
   else:
     i = 1
-    if n_list[num-1] == 0:
-      n_list[num-1] = 1
-    else:
-      n_list[num-1] = 0
-    
-    for _ in range(n//2):
+    check(num-1)
+    for _ in range(50):
       if (num-1-i) < 0 or (num-1+i) > n-1:
-        break;
+        break
       if n_list[num-1-i] == n_list[num-1+i]:
-        if n_list[num-1-i] == 0:
-          n_list[num-1-i] = 1
-        else:
-          n_list[num-1-i] = 0
-
-        if n_list[num-1+i] == 0:
-          n_list[num-1+i] = 1
-        else:
-          n_list[num-1+i] = 0
+        check(num-1-i)
+        check(num-1+i)
       else:
         break
       i+=1
