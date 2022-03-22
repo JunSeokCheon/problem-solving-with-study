@@ -27,4 +27,5 @@ def solution(dartResult):
                     resultlist[-1] = resultlist[-1] * 2
             elif i == "#":
                 resultlist[-1] = resultlist[-1] * (-1)
+              
     return sum(resultlist)
