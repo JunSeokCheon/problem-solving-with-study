@@ -1,5 +1,4 @@
 def solution(s):
-    answer = -1
     stack = []
     
     for alpha in s:
