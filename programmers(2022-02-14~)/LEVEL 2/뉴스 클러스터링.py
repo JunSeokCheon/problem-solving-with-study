@@ -40,7 +40,5 @@ def solution(str1, str2):
     
     if union_len == 0 and intersection_len == 0:
         return 65536
-    elif intersection_len == 0:
-        return 0
     else:
         return int(intersection_len/union_len*65536)
